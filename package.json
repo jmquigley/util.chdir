@@ -1,6 +1,6 @@
 {
   "name": "util.chdir",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "An implementation of pushd/popd for JavaScript.",
   "private": false,
@@ -13,7 +13,7 @@
     "url": "https://github.com/jmquigley/util.chdir/issues"
   },
   "engines": {
-    "node": ">=6.5"
+    "node": ">=7.4"
   },
   "dependencies": {
     "fs-extra": "^2.0.0"
