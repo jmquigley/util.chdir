@@ -1,4 +1,4 @@
-# util.chdir [![Build Status](https://travis-ci.org/jmquigley/util.chdir.svg?branch=master)](https://travis-ci.org/jmquigley/util.chdir) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/badge/npm-v0.0.6-blue.svg)](https://www.npmjs.com/package/util.chdir) [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.chdir/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.chdir?branch=master)
+# util.chdir [![Build Status](https://travis-ci.org/jmquigley/util.chdir.svg?branch=master)](https://travis-ci.org/jmquigley/util.chdir) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/npm/v/util.chdir.svg)](https://www.npmjs.com/package/util.chdir)  [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.chdir/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.chdir?branch=master)
 
 > An implementation of pushd/popd for JavaScript
 
