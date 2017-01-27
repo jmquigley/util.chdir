@@ -4,10 +4,14 @@ const path = require('path');
 const test = require('ava');
 const fs = require('fs-extra');
 const home = require('expand-home-dir');
-const timestamp = require('util.timestamp');
+const uuidV4 = require('uuid/v4');
 const chdir = require('./index');
 
-let unitTestDir = home(path.join('~/', '.tmp', `unit-test-data-${timestamp()}`));
+let unitTestBaseDir = home(path.join('~/', '.tmp', 'unit-test-data'));
+let unitTestDir = home(path.join(unitTestBaseDir, uuidV4()));
+if (fs.existsSync(unitTestDir)) {
+	fs.mkdirsSync(unitTestDir);
+}
 
 test.before(t => {
 	if (fs.existsSync(unitTestDir)) {
@@ -18,7 +22,7 @@ test.before(t => {
 });
 
 test.after.always('cleanup', t => {
-	fs.removeSync(unitTestDir);
+	fs.removeSync(unitTestBaseDir);
 	t.pass();
 });
 
