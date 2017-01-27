@@ -13,6 +13,6 @@ let directories = [
 directories.forEach(function(directory) {
 	fs.mkdirsSync(directory);
 	if (process.platform !== 'win32') {
-		ps.execSync('chmod 777 ./coverage');
+		ps.execSync(`chmod 777 ${directory}`);
 	}
 });
