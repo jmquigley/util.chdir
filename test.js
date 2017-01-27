@@ -1,16 +1,19 @@
 'use strict';
 
+const path = require('path');
 const test = require('ava');
 const fs = require('fs-extra');
+const home = require('expand-home-dir');
+const timestamp = require('util.timestamp');
 const chdir = require('./index');
 
-let unitTestDir = 'tmp-unit-test-data';
+let unitTestDir = home(path.join('~/', '.tmp', `unit-test-data-${timestamp}`));
 
 test.before(t => {
 	if (fs.existsSync(unitTestDir)) {
 		fs.removeSync(unitTestDir);
 	}
-	fs.mkdirSync(unitTestDir);
+	fs.mkdirsSync(unitTestDir);
 	t.pass();
 });
 
