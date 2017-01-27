@@ -7,7 +7,7 @@ const home = require('expand-home-dir');
 const timestamp = require('util.timestamp');
 const chdir = require('./index');
 
-let unitTestDir = home(path.join('~/', '.tmp', `unit-test-data-${timestamp}`));
+let unitTestDir = home(path.join('~/', '.tmp', `unit-test-data-${timestamp()}`));
 
 test.before(t => {
 	if (fs.existsSync(unitTestDir)) {
