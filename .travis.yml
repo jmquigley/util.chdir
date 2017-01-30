@@ -3,4 +3,4 @@ node_js:
     - '7'
 
 after_success:
-    - './node_modules/.bin/nyc report --temp-directory=~/.tmp/.nyc_output --reporter=text-lcov | ./node_modules/.bin/coveralls'
+    - './node_modules/.bin/nyc report --temp-directory=/home/travis/.tmp/.nyc_output --reporter=text-lcov | ./node_modules/.bin/coveralls'
