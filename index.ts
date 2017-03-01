@@ -1,15 +1,15 @@
 'use strict';
 
-let fs = require('fs-extra');
+import * as fs from 'fs-extra';
 
-let directoryStack = [];
+let directoryStack: string[] = [];
 
 /**
  * Retrieves the top of the directory list stack, changes to that directory
  * and returns.  If there are no directories in the list, it just returns.
  * @returns {string} the name of the directory that was retrieved.
  */
-function popd() {
+export function popd() {
 	let directory = '';
 	if (directoryStack.length > 0) {
 		directory = directoryStack.pop();
@@ -26,7 +26,7 @@ function popd() {
  * @param directory {string} the directory to change to
  * @returns {string} the working directory before the change
  */
-function pushd(directory) {
+export function pushd(directory: string) {
 	let cwd = process.cwd();
 
 	if (fs.existsSync(directory)) {
@@ -36,8 +36,3 @@ function pushd(directory) {
 
 	return cwd;
 }
-
-module.exports = {
-	popd: popd,
-	pushd: pushd
-};
