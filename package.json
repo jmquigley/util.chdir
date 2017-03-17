@@ -1,6 +1,6 @@
 {
   "name": "util.chdir",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "An implementation of pushd/popd for JavaScript.",
   "private": false,
