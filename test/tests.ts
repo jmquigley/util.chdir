@@ -1,7 +1,6 @@
 'use strict';
 
 import * as assert from 'assert';
-import * as fs from 'fs-extra';
 import {popd, pushd} from '../index';
 
 describe('Testing util.chdir', () => {
