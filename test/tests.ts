@@ -1,13 +1,11 @@
 'use strict';
 
-import * as assert from 'assert';
+import test from 'ava';
 import {popd, pushd} from '../index';
 
-describe('Testing util.chdir', () => {
-	it('Validating directory change', () => {
-		let startingLocation: string = process.cwd();
-		let cwd = pushd('test');
-		assert.equal(startingLocation, cwd);
-		assert(popd(), startingLocation);
-	});
+test('Validating directory change', t => {
+	const startingLocation: string = process.cwd();
+	const cwd = pushd('test');
+	t.is(startingLocation, cwd);
+	t.is(popd(), startingLocation);
 });

@@ -2,7 +2,7 @@
 
 import * as fs from 'fs-extra';
 
-let directoryStack: string[] = [];
+const directoryStack: string[] = [];
 
 /**
  * Retrieves the top of the directory list stack, changes to that directory
@@ -27,7 +27,7 @@ export function popd() {
  * @returns {string} the working directory before the change
  */
 export function pushd(directory: string) {
-	let cwd = process.cwd();
+	const cwd = process.cwd();
 
 	if (fs.existsSync(directory)) {
 		directoryStack.push(cwd);
