@@ -6,41 +6,31 @@ This mimics the bash [pushd/popd functions](https://en.wikipedia.org/wiki/Pushd_
 
 ## Installation
 
+This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
+
 To install as a global package and cli:
 ```
-$ npm install --global util.chdir
+$ yarn global add util.chdir
 ```
 
 To install as a development dependency with cli:
 ```
-$ npm install --save-dev util.chdir
+$ yarn add --dev util.chdir
 ```
 
-## Scripts
-The following `npm` scripts are available within this module:
+To build the app and run all tests:
+```
+$ yarn run all
+```
 
-```
-$ npm run postinstall
-``` 
-Runs after the module is installed.  It creates the directories needed for test coverage.  It also sets the permissions on these directories to 777
-
-```
-$ npm test
-```
-Runs the [xo](https://www.npmjs.com/package/xo) lint tool.  If that is successful then it runs the [ava](https://www.npmjs.com/package/ava) unit test suite.  The [nyc](https://www.npmjs.com/package/nyc) tool is used, with the unit test runner, to generate output for test coverage.  This process is wrapped by the `cmd.js` module.
-
-```
-$ npm run report
-```
-Creates a coverage report.  The `npm test` must be run first to generate the data needed in the report.
 
 ## Usage
 
     const chdir = require('util.chdir');
-    
+
     // assume directory is /home
     chdir.pushd('/tmp');
     // pushes /home on the stack and changes to /tmp
-    
+
     chdir.popd();
     // pops the top of the stack and switches to that directory
