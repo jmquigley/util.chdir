@@ -1,6 +1,12 @@
-# util.chdir [![Build Status](https://travis-ci.org/jmquigley/util.chdir.svg?branch=master)](https://travis-ci.org/jmquigley/util.chdir) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo) [![NPM](https://img.shields.io/npm/v/util.chdir.svg)](https://www.npmjs.com/package/util.chdir)  [![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.chdir/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.chdir?branch=master)
+# util.chdir
 
 > An implementation of pushd/popd for JavaScript
+
+[![Build Status](https://travis-ci.org/jmquigley/util.chdir.svg?branch=master)](https://travis-ci.org/jmquigley/util.chdir)
+[![tslint code style](https://img.shields.io/badge/code_style-TSlint-5ed9c7.svg)](https://palantir.github.io/tslint/)
+[![Test Runner](https://img.shields.io/badge/testing-jest-blue.svg)](https://facebook.github.io/jest/)
+[![NPM](https://img.shields.io/npm/v/util.chdir.svg)](https://www.npmjs.com/package/util.chdir)
+[![Coverage Status](https://coveralls.io/repos/github/jmquigley/util.chdir/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.chdir?branch=master)
 
 This mimics the bash [pushd/popd functions](https://en.wikipedia.org/wiki/Pushd_and_popd).  When changing a directory the `pushd` will place the current directory onto a stack and then change to the requested directory.  When `popd` is called, then the previous directory is restored from the top of that stack.  This is a way to simplify backtracking through a directory hierarchy.
 
