@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-import * as fs from 'fs-extra';
+import * as fs from "fs-extra";
 
 const directoryStack: string[] = [];
 
@@ -10,7 +10,7 @@ const directoryStack: string[] = [];
  * @returns {string} the name of the directory that was retrieved.
  */
 export function popd() {
-	let directory = '';
+	let directory = "";
 	if (directoryStack.length > 0) {
 		directory = directoryStack.pop();
 		process.chdir(directory);

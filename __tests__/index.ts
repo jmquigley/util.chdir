@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 
-import {popd, pushd} from '../index';
+import {popd, pushd} from "../index";
 
-test('Validating directory change', () => {
+test("Validating directory change", () => {
 	const startingLocation: string = process.cwd();
-	const cwd = pushd('__tests__');
+	const cwd = pushd("__tests__");
 	expect(startingLocation).toBe(cwd);
 	expect(popd()).toBe(startingLocation);
 });
