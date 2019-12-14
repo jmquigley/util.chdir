@@ -1,4 +1,4 @@
-import { popd, pushd } from "../index";
+import {popd, pushd} from "../index";
 
 test("Validating directory change", () => {
 	const startingLocation: string = process.cwd();
